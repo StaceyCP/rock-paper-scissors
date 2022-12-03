@@ -5,52 +5,75 @@
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/bebasneue/v9/JTUSjIg69CK48gW7PXoo9WlhyyTh89Y.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+}
 
-  body {
+body {
     background-color: #22333b;
     margin: 0;
     padding: 0;
-  }
+}
 
-  .game-title {
+.game-title {
     color: white;
     font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
     font-size: 50px;
     text-align: center;
-  }
+}
 
-  .game-status {
+
+.game-status {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 30px;
     letter-spacing: 1px;
-    margin-top: -20px;
+    margin-top: -15px;
     text-align: center;
     text-transform: uppercase;
-  }
+}
+  
+.score-board {
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+}
 
-  .user-options {
+.score-board p {
+    color: white;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    margin: 10px;
+}
+
+.user-options {
     display: flex;
     justify-content: space-evenly;
-    margin: 5px 25%;
-  }
+    margin: 5px 30%;
+}
 
-  .button {
+.game-instructions {
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.button {
     align-items: center;
     background-color: #fdf7c7;
     border: 8px solid #fde4a2;
     border-radius: 50%;
+    box-shadow: #0e1619 5px 5px 2px;
     display: flex;
     justify-content: center;
     margin: 10px;
     cursor: pointer;
     padding: 4%;
-  }
+}
 
-  .button img {
-    width: 64px;
-  }
+.button img {
+    width: 75px;
+}
 
-  .scissors img {
+.scissors img {
     transform: rotate(25deg);
-  }
+}
