@@ -2,11 +2,13 @@ let computerWinCount = 0;
 let playerWinCount = 0;
 let computersGo = Math.floor(Math.random() * 3);
 
+//Update compter image cards to display none.
 const computerChoices = document.getElementsByClassName("computer-attempt-image");
 for (let i = 0; i < computerChoices.length; i++) {
     computerChoices[i].style.display = "none";
 }
 
+//Uses math random to display correct image and remove the filler div
 function changePcImg() {
     if (computersGo === 0) {
         document.querySelector(".rock").style.display = "block"
@@ -20,11 +22,12 @@ function changePcImg() {
     }
 }
 setTimeout(changePcImg, 2000)
-// document.querySelector(".computer-attempt-image").className = `computer-attempt-image ${computersGo}`
-// computerChoice.style.display = "block"
 
+//Update score counters
 document.querySelector(".player-score").innerHTML = playerWinCount;
 document.querySelector(".computer-score").innerHTML = computerWinCount;
+
+//Will become winner announcement
 let gameStatus = document.querySelector(".game-status");
 
 console.log(computersGo);
