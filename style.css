@@ -24,7 +24,7 @@ body {
 .game-status {
     color: white;
     font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     letter-spacing: 1px;
     margin-top: -15px;
     text-align: center;
@@ -34,7 +34,7 @@ body {
 .score-board {
     display: flex;
     justify-content: center;
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 .score-board p {
@@ -42,6 +42,24 @@ body {
     font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
     font-size: 45px;
     margin: 10px;
+}
+
+.game-field {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: 250px;
+    margin: 10px 10%;
+}
+
+.game-card {
+    align-items: center;
+    background-color: #39a0ac;
+    border: 8px solid #205c62;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
 }
 
 .user-options {

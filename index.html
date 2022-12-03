@@ -13,15 +13,25 @@
         <h1 class="game-title">Rock Paper Scissors</h1>
     </header>
     <main>
-        <section class="game-container">
-            <h2 class="game-status">Shoot</h2>
-            <div class="score-board">
-                <p class="player-score">0</p>
-                <p>:</p>
-                <p class="computer-score">0</p>
-            </div>
-
+        <section class="score-board">
+            <p class="player-score">0</p>
+            <p>:</p>
+            <p class="computer-score">0</p>
         </section>
+        <section class="game-field">
+            <div class="player-attempt game-card">
+                <img src="img/stone.png" alt="rock icon">
+                <!-- <img src="img/paper.png" alt="paper icon"> 
+                <img src="img/scissors.png" alt="scissors icon"> -->
+            </div>
+            <h2 class="game-status">Shoot</h2>
+            <div class="computer-attempt game-card">
+                <img src="img/stone.png" alt="rock icon">
+                <!-- <img src="img/paper.png" alt="paper icon"> 
+                <img src="img/scissors.png" alt="scissors icon"> -->
+            </div>
+        </section>
+        <p class="game-instructions">Pick your weapon!</p>
         <section class="user-options">
             <div class="rock button">
                 <img src="img/stone.png" alt="rock icon">
@@ -33,7 +43,6 @@
                 <img src="img/scissors.png" alt="scissors icon">
             </div>
         </section>
-        <p class="game-instructions">Use the buttons to make your choice and battle it out against the computer</p>
     </main>
     <footer>
 
