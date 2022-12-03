@@ -20,7 +20,6 @@ body {
     text-align: center;
 }
 
-
 .game-status {
     color: white;
     font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
@@ -92,6 +91,11 @@ body {
     width: 75px;
 }
 
-.scissors img {
+.scissors {
     transform: rotate(25deg);
+}
+
+.filler {
+    width: 128px;
+    height: 128px;
 }
