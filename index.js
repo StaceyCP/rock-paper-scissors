@@ -21,7 +21,6 @@ function changeComputerImg() {
         document.querySelector(".filler").style.display = "none"
     }
 }
-setTimeout(changeComputerImg, 2000)
 
 //Update player cards to display none
 const playerCards = document.getElementsByClassName("player-attempt-image");
@@ -30,12 +29,26 @@ for (let i = 0; i < playerCards.length; i++) {
 }
 
 //Event listeners for player choice
-const playerChoiceBottons = document.getElementsByClassName("button");
-for (let i = 0; i < playerChoiceBottons.length; i++) {
-    playerChoiceBottons[i].addEventListener("click", () => {
-        console.log(playerChoiceBottons[i].className)
+const playerChoiceButtons = document.getElementsByClassName("button");
+for (let i = 0; i < playerChoiceButtons.length; i++) {
+    playerChoiceButtons[i].addEventListener("click", () => {
+        if (playerChoiceButtons[i].className === "rock button") {
+            document.querySelector(".player-rock").style.display = "block";
+            document.querySelector(".spacer").style.display = "none";
+            changeComputerImg()
+        } else if (playerChoiceButtons[i].className === "paper button") {
+            document.querySelector(".player-paper").style.display = "block";
+            document.querySelector(".spacer").style.display = "none";
+            changeComputerImg()
+        } else if (playerChoiceButtons[i].className === "scissors button rotate") {
+            document.querySelector(".player-scissors").style.display = "block";
+            document.querySelector(".spacer").style.display = "none";
+            changeComputerImg()
+        }
     })
 }
+
+//Event target 
 
 //Update score counters
 document.querySelector(".player-score").innerHTML = playerWinCount;
