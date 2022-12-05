@@ -95,6 +95,8 @@ for (let i = 0; i < playerChoiceButtons.length; i++) {
     })
 }
 
+//Reset game field
+
 document.querySelector(".reload-game").addEventListener("click", () => {
     hideComputerCards();
     document.querySelector(".filler").style.display = "block";
