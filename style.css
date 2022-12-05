@@ -91,7 +91,7 @@ body {
     width: 75px;
 }
 
-.scissors {
+.rotate {
     transform: rotate(25deg);
 }
 
