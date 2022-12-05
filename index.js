@@ -1,13 +1,15 @@
-let computersGo = Math.floor(Math.random() * 3);
+const gameReloadButton = document.querySelector(".reload-game").style.display = "none";
 
 //Update compter image cards to display none.
 const computerChoices = document.getElementsByClassName("computer-attempt-image");
-for (let i = 0; i < computerChoices.length; i++) {
+function hideComputerCards() {for (let i = 0; i < computerChoices.length; i++) {
     computerChoices[i].style.display = "none";
-}
+}};
+hideComputerCards();
 
 //Uses math random to display correct image and remove the filler div
 function changeComputerImg() {
+    const computersGo = Math.floor(Math.random() * 3);
     if (computersGo === 0) {
         document.querySelector(".rock").style.display = "block"
         document.querySelector(".filler").style.display = "none"
@@ -22,9 +24,10 @@ function changeComputerImg() {
 
 //Update player cards to display none
 const playerCards = document.getElementsByClassName("player-attempt-image");
-for (let i = 0; i < playerCards.length; i++) {
+function hidePlayerCards () {for (let i = 0; i < playerCards.length; i++) {
     playerCards[i].style.display = "none";
-}
+}};
+hidePlayerCards();
 
 // test 
 
@@ -36,28 +39,35 @@ function winner() {
     if (document.querySelector(".player-rock").style.display === "block" && document.querySelector(".scissors").style.display === "block") {
         playerWinCount ++;
         document.querySelector(".player-score").innerHTML = playerWinCount;
+        document.querySelector(".reload-game").style.display = "block";
         return document.querySelector(".game-status").innerHTML = "You win";
     } else if (document.querySelector(".player-rock").style.display === "block" && document.querySelector(".paper").style.display === "block") {
         computerWinCount ++;
         document.querySelector(".computer-score").innerHTML = computerWinCount;
+        document.querySelector(".reload-game").style.display = "block";
         return document.querySelector(".game-status").innerHTML = "You Lose";
     } else if (document.querySelector(".player-paper").style.display === "block" && document.querySelector(".scissors").style.display === "block") {
         computerWinCount ++;
         document.querySelector(".computer-score").innerHTML = computerWinCount;
+        document.querySelector(".reload-game").style.display = "block";
         return document.querySelector(".game-status").innerHTML = "You Lose";
     } else if (document.querySelector(".player-paper").style.display === "block" && document.querySelector(".rock").style.display === "block") {
         playerWinCount ++;
         document.querySelector(".player-score").innerHTML = playerWinCount;
+        document.querySelector(".reload-game").style.display = "block";
         return document.querySelector(".game-status").innerHTML = "You win";
     } else if (document.querySelector(".player-scissors").style.display === "block" && document.querySelector(".paper").style.display === "block") {
         playerWinCount ++;
         document.querySelector(".player-score").innerHTML = playerWinCount;
+        document.querySelector(".reload-game").style.display = "block";
         return document.querySelector(".game-status").innerHTML = "You win";
     } else if (document.querySelector(".player-scissors").style.display === "block" && document.querySelector(".rock").style.display === "block") {
         computerWinCount ++;
         document.querySelector(".computer-score").innerHTML = computerWinCount;
+        document.querySelector(".reload-game").style.display = "block";
         return document.querySelector(".game-status").innerHTML = "You Lose";
     } else { 
+        document.querySelector(".reload-game").style.display = "block";
         return document.querySelector(".game-status").innerHTML = "It's a draw";
     }
 }
@@ -85,4 +95,11 @@ for (let i = 0; i < playerChoiceButtons.length; i++) {
     })
 }
 
-console.log(computersGo);
+document.querySelector(".reload-game").addEventListener("click", () => {
+    hideComputerCards();
+    document.querySelector(".filler").style.display = "block";
+    hidePlayerCards();
+    document.querySelector(".spacer").style.display = "block";
+    document.querySelector(".game-status").innerHTML = "Shoot";
+    document.querySelector(".reload-game").style.display = "none";
+})
