@@ -99,3 +99,15 @@ body {
     width: 128px;
     height: 128px;
 }
+
+.game-state {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reload-game {
+    height: 35px;
+    width: 35px;
+}
