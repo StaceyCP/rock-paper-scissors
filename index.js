@@ -23,6 +23,14 @@ function changePcImg() {
 }
 setTimeout(changePcImg, 2000)
 
+//Event listeners for player choice
+const playerChoiceCards = document.getElementsByClassName("button");
+for (let i = 0; i < playerChoiceCards.length; i++) {
+    playerChoiceCards[i].addEventListener("click", () => {
+        console.log(playerChoiceCards[i].className);
+    })
+}
+
 //Update score counters
 document.querySelector(".player-score").innerHTML = playerWinCount;
 document.querySelector(".computer-score").innerHTML = computerWinCount;
