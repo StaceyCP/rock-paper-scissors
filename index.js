@@ -9,7 +9,7 @@ for (let i = 0; i < computerChoices.length; i++) {
 }
 
 //Uses math random to display correct image and remove the filler div
-function changePcImg() {
+function changeComputerImg() {
     if (computersGo === 0) {
         document.querySelector(".rock").style.display = "block"
         document.querySelector(".filler").style.display = "none"
@@ -21,13 +21,19 @@ function changePcImg() {
         document.querySelector(".filler").style.display = "none"
     }
 }
-setTimeout(changePcImg, 2000)
+setTimeout(changeComputerImg, 2000)
+
+//Update player cards to display none
+const playerCards = document.getElementsByClassName("player-attempt-image");
+for (let i = 0; i < playerCards.length; i++) {
+    playerCards[i].style.display = "none";
+}
 
 //Event listeners for player choice
-const playerChoiceCards = document.getElementsByClassName("button");
-for (let i = 0; i < playerChoiceCards.length; i++) {
-    playerChoiceCards[i].addEventListener("click", () => {
-        console.log(playerChoiceCards[i].className);
+const playerChoiceBottons = document.getElementsByClassName("button");
+for (let i = 0; i < playerChoiceBottons.length; i++) {
+    playerChoiceBottons[i].addEventListener("click", () => {
+        console.log(playerChoiceBottons[i].className)
     })
 }
 

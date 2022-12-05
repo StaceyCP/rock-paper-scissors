@@ -95,7 +95,7 @@ body {
     transform: rotate(25deg);
 }
 
-.filler {
+.filler, .spacer {
     width: 128px;
     height: 128px;
 }
