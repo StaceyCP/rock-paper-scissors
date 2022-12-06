@@ -131,8 +131,12 @@ nav a:hover {
 }
 
 @media only screen and (max-width:390px) {
+    .game-field {
+        margin: 10px 7%;
+    }
+
     .game-status {
-        font-size: 30px;
+        font-size: 20px;
         letter-spacing: 1px;
     }
 
@@ -155,7 +159,7 @@ nav a:hover {
     .user-options {
         display: flex;
         justify-content: space-evenly;
-        margin: 5px 30%;
+        margin: 5px 20%;
     }
     .button {
         display: flex;
@@ -171,8 +175,12 @@ nav a:hover {
 }
 
 @media only screen and (max-width:414px) {
+    .game-field {
+        margin: 10px 8%;
+    }
+
     .game-status {
-        font-size: 30px;
+        font-size: 28px;
         letter-spacing: 1px;
     }
 
@@ -195,7 +203,7 @@ nav a:hover {
     .user-options {
         display: flex;
         justify-content: space-evenly;
-        margin: 5px 30%;
+        margin: 5px 25%;
     }
     .button {
         display: flex;
