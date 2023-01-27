@@ -1,18 +1,22 @@
-// Elements 
+// Display elements
 const gameReloadButton = document.querySelector(".reload-game")
 const filler = document.querySelector(".filler");
+const spacer = document.querySelector(".spacer");
+const gameStatus = document.querySelector(".game-status");
+
+// Computer elements
 const rock = document.querySelector(".rock");
-const playerRock = document.querySelector(".player-rock");
 const paper = document.querySelector(".paper");
-const playerPaper = document.querySelector(".player-paper");
 const scissors = document.querySelector(".scissors");
-const playerScissors = document.querySelector(".player-scissors");
 const computerChoices = document.getElementsByClassName("computer-attempt-image");
+const computerScore = document.querySelector(".computer-score");
+
+// Player elements
+const playerRock = document.querySelector(".player-rock");
+const playerPaper = document.querySelector(".player-paper");
+const playerScissors = document.querySelector(".player-scissors");
 const playerCards = document.getElementsByClassName("player-attempt-image");
 const playerScore = document.querySelector(".player-score");
-const compterScore = document.querySelector(".computer-score");
-const gameStatus = document.querySelector(".game-status");
-const spacer = document.querySelector(".spacer");
 const playerChoiceButtons = document.getElementsByClassName("button");
 
 //Update compter image cards to display none.
@@ -57,12 +61,12 @@ function winner() {
         return gameStatus.innerText = "You win";
     } else if (playerRock.style.display === "block" && paper.style.display === "block") {
         computerWinCount ++;
-        compterScore.innerText = computerWinCount;
+        computerScore.innerText = computerWinCount;
         gameReloadButton.style.display = "block";
         return gameStatus.innerText = "You Lose";
     } else if (playerPaper.style.display === "block" && scissors.style.display === "block") {
         computerWinCount ++;
-        compterScore.innerText = computerWinCount;
+        computerScore.innerText = computerWinCount;
         gameReloadButton.style.display = "block";
         return gameStatus.innerText = "You Lose";
     } else if (playerPaper.style.display === "block" && rock.style.display === "block") {
@@ -77,7 +81,7 @@ function winner() {
         return gameStatus.innerText = "You win";
     } else if (playerScissors.style.display === "block" && rock.style.display === "block") {
         computerWinCount ++;
-        compterScore.innerHTML = computerWinCount;
+        computerScore.innerHTML = computerWinCount;
         gameReloadButton.style.display = "block";
         return gameStatus.innerText = "You Lose";
     } else { 
